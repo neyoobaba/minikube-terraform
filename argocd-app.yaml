@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: "https://github.com/neyoobaba/minikube-terraform"
-    targeRevision: HEAD
+    targetRevision: HEAD
     path: pythonapi-project
   destination:
     server: "https://kubernetes.default.svc"
