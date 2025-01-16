@@ -28,7 +28,7 @@ jobs:
           docker push neyoobaba/pythonapi:${{ env.SHORT_SHA }}
       - name: Configure Git Author
         run: |
-          git config --local user.email "hello@gmail.com"
+          git config --local user.email "helloo@gmail.com"
           git config --local user.name "neyoobaba"
       - name: Update Helm Chart with new image tag
         run: |
