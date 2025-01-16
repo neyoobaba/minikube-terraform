@@ -1,6 +1,6 @@
 image:
   repositoy: neyoobaba/pythonapi
-  tag: latest
+  tag 9c45417
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
