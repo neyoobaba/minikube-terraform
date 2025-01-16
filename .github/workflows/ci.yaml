@@ -33,7 +33,7 @@ jobs:
       - name: Update Helm Chart with new image tag
         run: |
           echo $PWD
-          sed -i "s/tag:.*/tag ${{ env.SHORT_SHA }}/" ./pythonapi-project/values.yaml
+          sed -i "s/tag:.*/tag: ${{ env.SHORT_SHA }}/" ./pythonapi-project/values.yaml
           git add ./pythonapi-project/values.yaml
           git commit -m "Updated image tag to ${{ env.SHORT_SHA }}" 
           git push 
