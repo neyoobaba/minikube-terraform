@@ -1,0 +1,13 @@
+image:
+  repositoy: neyoobaba/pythonapi
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 9001
+ingress:
+  enabled: false
+serviceAccount:
+  enabled: false
+autoscaling:
+  enabled: false
