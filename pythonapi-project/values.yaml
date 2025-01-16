@@ -1,5 +1,5 @@
 image:
-  repositoy: neyoobaba/pythonapi
+  repository: neyoobaba/pythonapi
   tag: 6949491
   pullPolicy: IfNotPresent
 service:
