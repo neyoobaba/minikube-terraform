@@ -19,8 +19,10 @@ jobs:
       - name: Build Docker Image
         run: |
           cd app
-          docker build -t neyoobaba/pythonapi:${{ env.SHORT_SHA}} .
+          docker build -t neyoobaba/pythonapi:${{ env.SHORT_SHA }} .
       - name: Login to Dockerhub
         run: |
           echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
-          docker push neyoobaba/pythonapi:${{ env.GITHUB_SHA}}
+      - name: Push Image to Dockerhub
+        run: |
+          docker push neyoobaba/pythonapi:${{ env.SHORT_SHA }}
