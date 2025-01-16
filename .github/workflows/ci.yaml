@@ -1,0 +1,25 @@
+---
+
+name: Complete DevOpse Project Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Set Short SHA
+        run: |
+          echo "SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-7)" >> $GITHUB_ENV"
+      - name: Build Docker Image
+        run: |
+          docker build -t neyoobaba/pythonapi:${{ env.GITHUB_ENV}} .
+      - name: Login to Dockerhub
+        run: |
+          echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+          docker push neyoobaba/pythonapi:${{ env.GITHUB_ENV}}
