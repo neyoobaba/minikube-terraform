@@ -16,6 +16,7 @@ resource "minikube_cluster" "minikube_docker" {
   cluster_name = "terraform-minikube-project"
   addons = [
     "default-storageclass",
+    "ingress",
     "storage-provisioner"
   ]
 }

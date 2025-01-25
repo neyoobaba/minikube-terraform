@@ -4,6 +4,7 @@ resource "helm_release" "argocd" {
   repository = "https://argoproj.github.io/argo-helm"
   namespace      = "argocd"
   create_namespace  = "true"
+  # version     = "v2.13.3"
 
   values = [
     <<EOF
