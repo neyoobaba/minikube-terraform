@@ -1,6 +1,6 @@
 image:
   repository: neyoobaba/pythonapi
-  tag: 8ef4357
+  tag: 3b320fc
   pullPolicy: IfNotPresent
 replicaCount: 4
 service:
