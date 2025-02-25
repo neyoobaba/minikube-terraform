@@ -2,7 +2,7 @@ image:
   repository: neyoobaba/pythonapi
   tag: fa301e1
   pullPolicy: IfNotPresent
-replicaCount: 2
+replicaCount: 3
 service:
   type: ClusterIP
   port: 9001
